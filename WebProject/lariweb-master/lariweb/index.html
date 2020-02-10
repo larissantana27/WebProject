@@ -1,0 +1,233 @@
+<html>
+    <head>
+        <meta  charset="UTF-8"> 
+        <meta name="viewport" content="
+                                       width=device-width, initial-scale=1.0">
+        <title>VirtualWardrobe</title>
+        <link rel="stylesheet" type="text/css" href="css/menu.css" />
+        <link rel='shortcut icon' href="resources/img/logo.png" type='image/png' />
+        <script src="js/index.js"></script>
+    </head>
+    
+    
+         <img class="logo" src ="resources/img/Larissas.png" style="border-color: #540c49; border-style: solid;">
+        <header class="mainMenu">  
+                      <ul class="menuButtons">
+                        <button id="add" onClick="panelChanger(this.id)"> Add Piece
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <button id="remove" onClick="panelChanger(this.id)"> Remove Piece
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span></button>
+                        <button id="wear" onClick="panelChanger(this.id)"> Generate Outfit
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span></button>
+                        <button id="wardrobe_view" onClick="panelChanger(this.id)"> See Wardrobe
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                          </button> 
+                    </ul> 
+           
+            </header>
+        
+        <div class="purpleLine" style=" width: 100%;">
+         
+        </div>  
+        <body>
+        <!-- ADD -->
+         <form action="javascript:void(0)" id="form_add_shoes" class="hidden" >
+                <div>   
+                    <h2 style="text-align: center;"> Shoes</h2>
+                </div>
+             
+                <h2 style="text-align:center;">Color</h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="COLOR_SHOES" style="margin-left: 7vw;">
+                </div>
+             
+                <h2 style="text-align:center;">Type</h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="TYPE_SHOES" style="margin-left: 7vw;">
+                </div>
+                
+                <div class="button">
+                    <button id="submit_button" type="submit" onClick="addShoes()" style="margin-top: 3vw; margin-left: 11.5vw;">Add</button>
+                </div>
+        </form>
+        <form action="javascript:void(0)" id="form_add_bottom" class="hidden" >
+                <div>
+                    <h2 style="text-align: center;"> Bottom</h2>
+                </div>
+             
+                <h2 style="text-align:center;">Color</h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="COLOR_BOTTOM" style="margin-left: 7vw;">
+                </div>
+             
+                <h2 style="text-align:center;">Type</h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="TYPE_BOTTOM" style="margin-left: 7vw;">
+                </div>
+                
+                <div class="button">
+                    <button id="submit_button" type="submit" onClick="addBottom()" style="margin-top: 3vw; margin-left: 11.5vw;">ADD</button>
+                </div>
+        </form>
+        <form action="javascript:void(0)" id="form_add_top" class="hidden" >
+                <div>
+                    <h2 style="text-align: center;"> Top</h2>
+                </div>
+             
+                <h2 style="text-align:center;">Color</h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="COLOR_TOP" style="margin-left: 7vw;">
+                </div>
+             
+                <h2 style="text-align:center;">Type</h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="TYPE_TOP" style="margin-left: 7vw;">
+                </div>
+                
+                <div class="button">
+                    <button id="submit_button" type="submit" onClick="addTop()" style="margin-top: 3vw; margin-left: 11.5vw;">ADD</button>
+                </div>
+        </form>
+            
+        <!-- REMOVE -->
+        <form action="javascript:void(0)" id="remove_shoes" class="hidden" >
+                <div>
+                    <h2 style="text-align: center;"> Shoes</h2>
+                </div>
+             
+                <h2 style="text-align:center;">Shoes ID</h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="ID_SHOES" style="margin-left: 7vw;">
+                </div>
+             
+                <div class="button">
+                    <button id="submit_button" type="submit" onClick="remove_shoes()" style="margin-top: 3vw; margin-left: 10vw;">remove</button>
+                </div>
+        </form>
+        <form action="javascript:void(0)" id="remove_bottom" class="hidden" >
+                <div>
+                    <h2 style="text-align: center;"> Bottom</h2>
+                </div>
+             
+                <h2 style="text-align:center;">Bottom ID </h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="ID_BOTTOM" style="margin-left: 7vw;">
+                </div>
+             
+                <div class="button">
+                    <button id="submit_button" type="submit" onClick="remove_bottom()" style="margin-top: 3vw; margin-left: 10vw;">REMOVE</button>
+                </div>
+        </form>
+            
+        <form action="javascript:void(0)" id="remove_top" class="hidden" >
+                <div>
+                    <h2 style="text-align: center;"> Top</h2>
+                </div>
+             
+                <h2 style="text-align:center;">Top ID</h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="ID_TOP" style="margin-left: 7vw;">
+                </div>
+             
+                <div class="button">
+                    <button id="submit_button" type="submit" onClick="remove_top()" style="margin-top: 3vw; margin-left: 10vw;">REMOVE</button>
+                </div>
+        </form>
+            
+        <!-- wear -->
+            
+        <form action="javascript:void(0)" id="look_shoes" class="hidden" >
+                <div>
+                    <h2 style="text-align: center;"> Shoes</h2>
+                </div>
+             
+                <h2 style="text-align:center;">Shoes ID</h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="ID_SHOES_1" style="margin-left: 7vw;">
+                </div>
+             
+                <div class="button">
+                    <button id="submit_button" type="submit" onClick="wear_shoes()" style="margin-top: 3vw; margin-left: 11vw;">wear</button>
+                </div>
+        </form>
+        <form action="javascript:void(0)" id="look_bottom" class="hidden" >
+                <div>
+                    <h2 style="text-align: center;"> Bottom</h2>
+                </div>
+             
+                <h2 style="text-align:center;">Bottom ID </h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="ID_BOTTOM_1" style="margin-left: 7vw;">
+                </div>
+             
+                <div class="button">
+                    <button id="submit_button" type="submit" onClick="wear_bottom()" style="margin-top: 3vw; margin-left: 11vw;">wear</button>
+                </div>
+        </form>
+            
+        <form action="javascript:void(0)" id="look_top" class="hidden" >
+                <div>
+                    <h2 style="text-align: center;"> Top</h2>
+                </div>
+             
+                <h2 style="text-align:center;">Top ID</h2>
+                <div>
+                    <label for="enunciado"></label>
+                    <input type="text" id="ID_TOP_1" style="margin-left: 7vw;">
+                </div>
+             
+                <div class="button">
+                    <button id="submit_button" type="submit" onClick="wear_top()" style="margin-top: 3vw; margin-left: 11vw;">Wear</button>
+                </div>
+        </form>
+        <div class="hidden" id="wearing" style="align-content: center; ">
+            <h1> WEARING </h1>
+            <button id="takeOfButton" style="border-color: #540c49;" onClick="takeOfClothes()"> Take off clothes</button>
+            
+        </div>
+        
+        <!-- wardrobe -->
+        <div class="hidden" id="wardrobe_shoes">
+            
+            
+        </div>
+        <div class="hidden" id="wardrobe_bottom">
+            <h2 style="text-align: center;"> BOTTOM </h2>
+            
+        </div>
+        <div class="hidden" id="wardrobe_top">
+            <h2 style="text-align: center;"> TOP </h2>
+            
+        </div>
+            
+        
+        <!-- ------------------------------------- -->
+     </body>
+</html>
+    
+
+
